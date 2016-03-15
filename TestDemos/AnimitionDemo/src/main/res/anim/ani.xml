@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!--Interpolator定义了动画变化的速率，在Animations框架当中定义了一下几种Interpolator-->
+    <!--?         AccelerateDecelerateInterpolator：在动画开始与结束的地方速率改变比较慢，在中间的时候速率快。-->
+    <!--?         AccelerateInterpolator：在动画开始的地方速率改变比较慢，然后开始加速-->
+    <!--?         CycleInterpolator：动画循环播放特定的次数，速率改变沿着正弦曲线-->
+    <!--?         DecelerateInterpolator：在动画开始的地方速率改变比较慢，然后开始减速-->
+    <!--?         LinearInterpolator：动画以均匀的速率改变-->
+
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/accelerate_interpolator">
+
+    <scale
+        android:duration="200"
+        android:fromXScale="0.6"
+        android:fromYScale="0.6"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toXScale="1.1"
+        android:toYScale="1.1" />
+    <scale
+        android:delay="200"
+        android:duration="400"
+        android:fromXScale="1.0"
+        android:fromYScale="1.0"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toXScale="0.91"
+        android:toYScale="0.91" />
+
+    <alpha
+        android:duration="400"
+        android:fromAlpha="0.0"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:toAlpha="1.0" />
+
+</set>
